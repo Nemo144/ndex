@@ -4,10 +4,12 @@ description = ''
 authors = []
 telemetry = false
 cache_dir = './.cache'
-requirements = []
+
+[[project.requirements]]
+contract_id = 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard'
 [contracts.ndex]
 path = 'contracts/ndex.clar'
-clarity_version = 4
+clarity_version = 3
 epoch = 'latest'
 [repl.analysis]
 passes = [

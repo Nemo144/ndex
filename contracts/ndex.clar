@@ -4,6 +4,10 @@
 ;; description:
 
 ;; traits
+;;define the standard sip-010-trait for creating tokens
+(use-trait ft-trait 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.sip-010-trait)
+
+
 
 ;;
 
@@ -11,6 +15,26 @@
 ;;
 
 ;; constants
+;;define the minimum liquidity
+(define-constant MINIMUM_LIQUIDITY u1000)
+
+;;define this contract
+(define-constant THIS_CONTRACT (as-contract tx-sender))
+
+;;define the fees denominator
+(define-constant FFES_DENOM u10000)
+
+;;define the error codes 
+(define-constant ERR_POOL_ALREADY_EXISTS (err u200)) ;; pool already exists
+(define-constant ERR_INCORRECT_TOKEN_ORDERING (err u201)) ;; incorrect token ordering (invalid sorting)
+(define-constant ERR_INSUFFICIENT_LIQUIDITY_MINTED (err u202)) ;; insufficient liquidity amounts being added
+(define-constant ERR_INSUFFICIENT_LIQUIDITY_OWNED (err u203)) ;; not enough liquidity owned to withdraw the requested amount
+(define-constant ERR_INSUFFICIENT_LIQUIDITY_BURNED (err u204)) ;; insufficient liquidity amounts being removed
+(define-constant ERR_INSUFFICIENT_INPUT_AMOUNT (err u205)) ;; insufficient input token amount for swap
+(define-constant ERR_INSUFFICIENT_LIQUIDITY_FOR_SWAP (err u206)) ;; insufficient liquidity in pool for swap
+(define-constant ERR_INSUFFICIENT_1_AMOUNT (err u207)) ;; insufficient amount of token 1 for swap
+(define-constant ERR_INSUFFICIENT_0_AMOUNT (err u208)) ;; insufficient amount of token 0 for swap
+
 ;;
 
 ;; data vars
