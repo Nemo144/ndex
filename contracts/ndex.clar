@@ -41,6 +41,20 @@
 ;;
 
 ;; data maps
+;;define the pools mapping
+(define-map pools (buff 20) 
+    {
+        token-0: principal,
+        token-1: principal,
+        fee: uint,
+
+        liquidity: uint,
+        balance-0: uint,
+        balance-1: uint
+    })
+
+;;define the positions mapping
+(define-map positions { pool-id: (buff 20), owner: principal } { liquidity: uint })    
 ;;
 
 ;; public functions
